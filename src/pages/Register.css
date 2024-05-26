@@ -1,0 +1,92 @@
+/* CSS */
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a; /* Dark background color */
+  }
+  
+  .formWrapper {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #333; /* Form background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .logo {
+    text-align: center;
+    color: #fff; /* Logo color */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    text-align: center;
+    color: #fff; /* Title color */
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Input border color */
+  }
+  
+  .avatar-upload {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .avatar-upload img {
+    width: 50px;
+    margin-right: 10px;
+  }
+  
+  .avatar-upload span {
+    color: #fff; /* Avatar upload text color */
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc; /* Disabled button background color */
+    cursor: not-allowed;
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  p a {
+    color: #007bff; /* Link color */
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }
+  
+  span {
+    color: red; /* Error message color */
+  }
+  

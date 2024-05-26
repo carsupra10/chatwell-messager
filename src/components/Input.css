@@ -1,0 +1,44 @@
+/* Input.css */
+
+.input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #000000;
+  background-color: #000000;
+}
+
+.input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #111111;
+  outline: none;
+}
+
+.send {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.send img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.send button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #0084ff;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.send button:hover {
+  background-color: #005bb5;
+}

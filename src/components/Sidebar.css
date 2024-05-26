@@ -1,0 +1,10 @@
+/* src/components/Sidebar.css */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  padding: 10px;
+  height: calc(100vh - 90px); /* Adjust height for top bar and bottom navbar */
+  overflow-y: auto;
+}

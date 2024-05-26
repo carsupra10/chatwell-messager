@@ -1,0 +1,20 @@
+/* src/components/Chat.css */
+
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 90px); /* Adjust height for top bar and bottom navbar */
+  background-color: #1e1e1e;
+  overflow-y: auto;
+}
+
+.chatInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}

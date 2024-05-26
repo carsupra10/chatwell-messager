@@ -1,0 +1,48 @@
+/* src/pages/Home.css */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: white;
+  overflow: hidden;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar .accounts {
+  display: flex;
+  align-items: center;
+}
+
+.bottom-navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #2a2a2a;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-navbar span {
+  cursor: pointer;
+}
+
+.bottom-navbar img {
+  width: 24px;
+  height: 24px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
