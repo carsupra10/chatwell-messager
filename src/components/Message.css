@@ -1,50 +1,39 @@
-/* Message.css */
-
 .message {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-  
-  .message.owner {
-    align-items: flex-end;
-  }
-  
-  .messageInfo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-  }
-  
-  .messageAvatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-right: 10px;
-  }
-  
-  .messageAvatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .messageContent {
-    max-width: 80%;
-    background-color: #000000;
-    padding: 10px;
-    border-radius: 10px;
-    position: relative;
-  }
-  
-  .messageContent p {
-    margin: 0;
-  }
-  
-  .messageContent img {
-    max-width: 100%;
-    margin-top: 10px;
-    border-radius: 10px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  align-items: flex-start;
+}
+
+.message.owner {
+  align-items: flex-end;
+}
+
+.messageContent {
+  max-width: 80%;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  padding: 10px;
+  border-radius: 15px;
+  position: relative;
+  word-wrap: break-word;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.messageContent p {
+  margin: 0;
+}
+
+.messageContent img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.messageTime {
+  display: block;
+  text-align: right;
+  font-size: 0.8em;
+  color: #a0a0a0;
+  margin-top: 5px;
+}

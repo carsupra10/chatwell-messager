@@ -2,15 +2,15 @@ import { doc, onSnapshot } from "firebase/firestore";
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { ChatContext } from "../context/ChatContext";
+import { ScreenContext } from "../context/ScreenContext";
 import { db } from "../firebase";
-import { useNavigate } from 'react-router-dom';
-import './Chats.css'; // Ensure you import the CSS file
+import './Chats.css';
 
 const Chats = () => {
   const [chats, setChats] = useState([]);
   const { currentUser } = useContext(AuthContext);
   const { dispatch } = useContext(ChatContext);
-  const navigate = useNavigate(); // Use useNavigate instead of useHistory
+  const { setActiveScreen } = useContext(ScreenContext);
 
   useEffect(() => {
     const getChats = () => {
@@ -28,7 +28,7 @@ const Chats = () => {
 
   const handleSelect = (u) => {
     dispatch({ type: "CHANGE_USER", payload: u });
-    navigate(''); // Navigate to the chat page
+    setActiveScreen('chat');
   };
 
   return (

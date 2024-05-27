@@ -1,15 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import Sidebar from '../components/Sidebar';
 import Chat from '../components/Chat';
 import './Home.css';
 import Navbar from '../components/Navbar';
+import { ScreenContext } from '../context/ScreenContext';
 
 const Home = () => {
-  const [activeScreen, setActiveScreen] = useState('sidebar');
-
-  const toggleScreen = () => {
-    setActiveScreen(activeScreen === 'sidebar' ? 'chat' : 'sidebar');
-  };
+  const { activeScreen, toggleScreen } = useContext(ScreenContext);
 
   return (
     <div className='home'>

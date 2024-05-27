@@ -1,5 +1,3 @@
-// Search.jsx
-
 import React, { useContext, useState } from "react";
 import {
   collection,
@@ -100,6 +98,7 @@ const Search = () => {
           onChange={(e) => setUsername(e.target.value)}
           value={username}
         />
+        <button onClick={handleSearch}>Search</button> {/* Add this button */}
       </div>
       {err && <span>User not found!</span>}
       {user && (

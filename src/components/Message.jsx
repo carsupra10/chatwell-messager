@@ -1,11 +1,9 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { ChatContext } from "../context/ChatContext";
-import './Message.css'; // Ensure you import the CSS file
+import './Message.css';
 
 const Message = ({ message }) => {
   const { currentUser } = useContext(AuthContext);
-  const { data } = useContext(ChatContext);
 
   const ref = useRef();
 
@@ -13,27 +11,26 @@ const Message = ({ message }) => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   }, [message]);
 
+  const formatTimestamp = (timestamp) => {
+    if (!timestamp) return 'Time unknown';
+    // Check if the timestamp is a Firestore Timestamp object
+    if (timestamp instanceof Date) {
+      return timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    } else {
+      // Handle server-provided timestamp
+      return timestamp; // Assuming server sends timestamp in a displayable format
+    }
+  };
+
   return (
     <div
       ref={ref}
       className={`message ${message.senderId === currentUser.uid && "owner"}`}
     >
-      <div className="messageInfo">
-        <div className="messageAvatar">
-          <img
-            src={
-              message.senderId === currentUser.uid
-                ? currentUser.photoURL
-                : data.user.photoURL
-            }
-            alt=""
-          />
-        </div>
-        <span>just now</span>
-      </div>
       <div className="messageContent">
         <p>{message.text}</p>
         {message.img && <img src={message.img} alt="" />}
+        <span className="messageTime">{formatTimestamp(message.timestamp)}</span>
       </div>
     </div>
   );
